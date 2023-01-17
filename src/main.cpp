@@ -6,7 +6,7 @@
 #include <PubSubClient.h>
 
 const char* wifi_ssid = "huge";
-const char* wifi_password = "123stromae" ;
+const char* wifi_password = "12345678" ;
 const char* mqtt_server = "27cc61dbaffc4da08cd0081cabd8cf01.s2.eu.hivemq.cloud";
 int mqtt_port = 8883;
 const char* mqtt_user = "ocres4ever";
@@ -77,8 +77,8 @@ void setup() {
   delay(100);
 
   // Connect to WiFi
-  // ...
   
+  connect_wifi();
   // Configure MQTT server
   mqtt_client.setServer(mqtt_server, mqtt_port);
   client.setCACert(ca_cert);
